@@ -12,7 +12,7 @@ const routes: Routes = [{
     component: HomeComponent,
   }, {
     path: "",
-    redirectTo: '/shop',
+    redirectTo: '/home',
     pathMatch: 'full'
   }]
 }];

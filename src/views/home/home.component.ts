@@ -19,6 +19,17 @@ export class HomeComponent extends BasePage implements OnInit {
       super(activatedRoute, allService);
   }
 
+  public beforeAfterList: string[] = [
+    "../../assets/beforeAfter/img1.JPG",
+    "../../assets/beforeAfter/img2.JPG",
+    "../../assets/beforeAfter/img3.JPG",
+    "../../assets/beforeAfter/img4.JPG",
+    "../../assets/beforeAfter/img5_1.JPG",
+    "../../assets/beforeAfter/img5_2.JPG",
+    "../../assets/beforeAfter/img5_3.JPG",
+    "../../assets/beforeAfter/img6.JPG"
+  ]
+
   public ngOnInit(): void {
     
   }

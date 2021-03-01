@@ -1,8 +1,10 @@
-@import '../../../../styles/styles-variables.scss';
+@import '../../../styles/styles-variables.scss';
 
 label {
+  position: relative;
   display: block;
   position: relative;
+  width: 50px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -12,16 +14,15 @@ label {
   margin-bottom: 10px;
 }
 
-textarea {
-  resize: none;
+.inputLine {
   background: white;
   border: 2px solid $color-input-disabled;
   border-radius: 8px;
   padding: 16px;
-  min-height: 56px;
+  height: 56px;
   width: 100%;
   font-size: 14px;
-  line-height: 23px;
+  line-height: 24px;
 }
 
 *:focus {
@@ -40,7 +41,6 @@ textarea {
   top: 16px;
   left: 16px;
   background: white;
-  color: gray;
   pointer-events: none;
   font-size: 14px;
   line-height: 24px;
@@ -58,15 +58,16 @@ textarea {
   pointer-events: none;
 }
 
-icon {    
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  cursor: pointer;
+.hideInput {
+  opacity: 0;
+  height: 0;
+  width: 100%;
 }
 
-.label[data-disable="true"] {
-  input {
-    pointer-events: none;
-  }
+::ng-deep
+.mat-calendar {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 8px 8px 15px rgba(0,0,0,0.2);
 }

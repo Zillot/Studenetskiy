@@ -1,0 +1,56 @@
+@import '../../../styles/styles-variables.scss';
+
+label {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 50px;
+  background-color: $color-font-divider;
+  border-radius: 15px;
+}
+
+label:hover input ~ span {
+  background-color: #ccc;
+}
+
+label input:checked ~ span {
+  background-color: $color-primary;
+}
+
+span:after {
+  content: "";
+  position: absolute;
+}
+
+label span:after {
+  top: 3px;
+	left: 3px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+  background: white;
+  transition: left 0.2s ease-in-out;
+}
+
+label input:checked ~ span:after {
+	left: 23px;
+}

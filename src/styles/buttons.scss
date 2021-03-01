@@ -16,6 +16,7 @@ button {
     display: inline-block;
     vertical-align: top;
     margin-right: 10px;
+    margin-bottom: 10px;
 
     transition: background-color 300ms ease-in-out, 
                 border-color 300ms ease-in-out,
@@ -36,6 +37,10 @@ button {
     &.wide {
         width: calc(100%);
         text-align: center;
+    }
+
+    &.nomargin {
+        margin-bottom: 0px;
     }
 
     /* share */
@@ -114,6 +119,7 @@ button {
     
     /* style */
     &.noBody {
+        padding: 0;
         background-color: transparent;
         border: transparent 2px solid;
         color: $color-button-primary-background;
