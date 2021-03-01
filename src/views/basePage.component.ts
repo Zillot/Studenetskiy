@@ -20,6 +20,7 @@ export class BasePage {
   
     if (!this.language) {
       var lang = localStorage.getItem('lang');
+
       this.setLanguage(lang);
     }
   }
@@ -41,18 +42,12 @@ export class BasePage {
   }
 
   public setLanguage(key) {
-    if (['ru', 'en'].indexOf(key) == -1 && !this.allService.translateService.getLangs().includes(this.language.languagekey)) {
-      this.allService.translateService.getTranslation("en").subscribe(enTr => {
-        this.allService.translateService.setTranslation(key, enTr);
-
-        this.allService.translateService.use(key);
-        localStorage.setItem('lang', key);
-      });
+    if (!key) {
+      key = "ru";
     }
-    else {
-        this.allService.translateService.use(key);
-        localStorage.setItem('lang', key);
-    }
+    
+    this.allService.translateService.use(key);
+    localStorage.setItem('lang', key);
   }
   //>>>>>>>> LANGUGE
 
