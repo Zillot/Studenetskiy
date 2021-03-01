@@ -1,0 +1,10 @@
+<label attr.data-disable="{{disable}}" (click)="bigClick()">
+  <div class="placeholder" attr.data-hide="{{focused}}">{{placeholder | translate}}</div>
+  <icon *ngIf="icon" name="{{icon}}" (click)="click()" class="svgGray"></icon>
+
+  <textarea [(ngModel)]="inputModel" (ngModelChange)="modelChanged()" disabled="{{disable}}"
+    cols="{{cols}}" rows="{{rows}}" (focus)="onFocus()" (blur)="onBlur()" (keyup)="onKey($event)">
+  </textarea>
+
+  <div class="error" *ngIf="errorText" [@ShowAndHideByHeight]>{{errorText | translate}}</div>
+</label>

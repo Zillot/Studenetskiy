@@ -1,0 +1,8 @@
+<label>
+  <div class="placeholder" attr.data-hide="{{inputModel != null}}">{{placeholder | translate}}</div>
+
+  <pnInput [errorText]="errorText" [inputModel]="selectedString" type="text" [disable]="true" [placeholder]="placeholder" icon="today" (onIconClick)="picker.open()"></pnInput>
+
+  <input class="hideInput" matInput [matDatepicker]="picker" [(ngModel)]="inputModel" (dateChange)="modelChanged()">
+  <mat-datepicker #picker></mat-datepicker>
+</label>

@@ -1,0 +1,71 @@
+@import 'styles-variables.scss';
+
+.view-container {
+    max-width: 1200px;
+    margin: auto auto;
+    margin-top: 16px;
+    padding: 16px;
+    min-height: 200px;
+}
+
+.dialog {
+    border-radius:  10px 10px 0 0;
+    height: calc(100vh - 35px);
+    margin-top: 10px;
+    padding: 16px;
+    width: 400px;
+    background-color: white;
+
+    .dialog-header {
+        position: relative;
+        border-radius:  10px 10px 0 0;
+        background-color: white;
+        padding-top: 10px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: center;
+        margin: -16px;
+        margin-bottom: 16px;
+
+        button {
+            position: absolute;
+            right: 14px;
+            top: 12px;
+        }
+    }
+}
+
+.oneLine {
+    & .pnInput {
+        display: inline-block;
+        vertical-align: top;
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+    }
+
+    & .pnInput-autocomplete {
+        display: inline-block;
+        vertical-align: top;
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+    }
+
+    &.items3 > .pnInput {
+        width: calc((100% - 40px) / 3);
+    }
+    
+    &.items3 .pnInput-autocomplete {
+        width: calc((100% - 40px) / 3);
+    }
+
+    .noStep {
+        & > .pnInput  {
+            margin-right: 0;
+        }
+
+        & .pnInput-autocomplete  {
+            margin-right: 0;
+        }
+    }
+}

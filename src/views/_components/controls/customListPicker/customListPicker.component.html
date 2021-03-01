@@ -1,0 +1,15 @@
+<label class="pnListPicker">
+  <div (click)="showDropdown()">
+    <ng-content></ng-content>
+  </div>
+
+  <div #dropdownElement></div>
+
+  <generic-dropdown [reference]="dropdownElement" #dropdownComp>
+    <div class="dropdown-container">
+      <div class="dropdown-option" *ngFor="let option of options">
+        <div (click)="optionClick(option)">{{getOptionValue(option) | translate}}</div>
+      </div>
+    </div>
+  </generic-dropdown>
+</label>

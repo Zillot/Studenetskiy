@@ -1,0 +1,5 @@
+<div class="paginator">
+  <icon name="arrowLeft" (click)="left()"></icon>
+  <div *ngFor="let item of visiblePages" (click)="goTo(item)" [ngClass]="{'disable': item == '...', 'active': item == strPage}">{{item}}</div>
+  <icon name="arrowRight" (click)="right()"></icon>
+</div>

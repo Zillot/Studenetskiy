@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800&display=swap&subset=latin,cyrillic-ext,cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800&display=swap&subset=latin,cyrillic-ext,cyrillic');
+
+@import 'styles-variables.scss';
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none !important;
+  font-family: 'Roboto', sans-serif;
+  color: $color-font-text;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: white
+}
+/*reset*/
+
+@import 'buttons.scss';
+@import 'containers.scss';
+@import 'icons.scss';
+@import 'isBusy.scss';
+
+.cdk-overlay-pane {
+  max-width: 100% !important;
+}
+p {
+  user-select: text; /* standard syntax */
+  -webkit-user-select: text; /* webkit (safari, chrome) browsers */
+  -moz-user-select: text; /* mozilla browsers */
+  -khtml-user-select: text; /* webkit (konqueror) browsers */
+  -ms-user-select: text; /* IE10+ */
+}
+
+div {
+  user-select: none; /* standard syntax */
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.elipsis {
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}

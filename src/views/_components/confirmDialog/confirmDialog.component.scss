@@ -1,0 +1,27 @@
+@import '../../../styles/styles-variables.scss';
+
+.dialog {
+  margin: 0 0 0 0;
+  position: relative;
+  min-height: 180px;
+  height: initial;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.text {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  button {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}

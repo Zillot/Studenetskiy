@@ -1,0 +1,49 @@
+<div class="npCarusel">
+    <div class="autoPlay">
+        <div>
+            <pnSwitch (change)="autoPlayChagned()" [(inputModel)]="isAutoPlay"></pnSwitch>
+        </div>
+        
+        <p>
+            {{'Autoplay' | translate}}
+        </p>
+    </div>
+
+    <div class="previewHolder">
+        <img class="preview" *ngIf="!selectedBuffer && selected" src="{{selected}}" (click)="showLightbox()">
+
+        <div  *ngIf="selectedBuffer">
+            <img class="preview_prev" @ShowByLeftOffset src="{{selected}}">
+            <img class="preview_next" @HideByRightOffset src="{{selectedBuffer}}">
+        </div>
+
+        <div class="videoIcon" @ShowAndHideByOpacityQuick *ngIf="video && selected == imgsList[0]">
+            <icon class="svgWhite" name="youtube"></icon>
+        </div>
+    </div>
+
+    <div class="horizontalScroll scrollButtons">
+        <div class="scrollButton left" (click)="scrollLeft()" *ngIf="hasScrollLeft()">
+            <icon class="svgWhite svgBig2" name='arrowLeft'></icon>
+        </div>
+
+        <div class="options" id="imgs">
+            <div class="option" *ngFor="let img of imgsList; let i = index" [ngClass]="{'selected': i == safeSelectedIndex}" (click)="clickOn(i)">
+                <img src="{{img}}">
+
+                <div *ngIf="video && i == 0" class="videoPlaceholder">
+                    <icon class="svgWhite" name="youtube"></icon>
+                </div>
+                
+                <div class="autoplayLoader" [ngClass]="{'gomax': i == getNextAutoplayIndex && isAutoPlay}"></div>
+            </div>
+        </div>
+        
+        <div class="scrollButton right" (click)="scrollRight()" *ngIf="hasScrollRight()">
+            <icon class="svgWhite svgBig2" name='arrowRight'></icon>
+        </div>
+    </div>
+</div>
+
+<ng-image-fullscreen-view [images]="imageObject" [imageIndex]="safeSelectedIndex" [showVideoControls]="true" [videoAutoPlay]=false
+    [show]="showFlag" (close)="closeEventHandler()" [paginationShow]="true"></ng-image-fullscreen-view>

@@ -1,0 +1,46 @@
+$color-primary: #2E74F6;
+$color-secondary: #6C6C6C;
+$color-highlighter: #f5f5f5;
+$color-accent: orange;
+$color-approve: rgb(13, 184, 13);
+$color-danger: rgb(250, 61, 27);
+
+$color-primary-darken: darken($color-primary, 20%);
+$color-primary-lighten: lighten($color-primary, 20%);
+
+$color-secondary-darken: darken($color-secondary, 20%);
+$color-secondary-lighten: lighten($color-secondary, 20%);
+
+$color-highlighter-darken: darken($color-highlighter, 20%);
+$color-highlighter-lighten: lighten($color-highlighter, 20%);
+
+$color-bodyback: #E5E5E5;
+$color-overlay-backgroud: white;
+
+$color-input-text: #1f1f1f;
+$color-input-disabled: #bebebe;
+$color-input-back: #eeeeee;
+
+$color-font-text: #161616;
+$color-font-disabled: #bebebe;
+$color-font-divider: #EFEFF4;
+
+$color-button-primary-text: white;
+$color-button-primary-background: $color-primary;
+$color-button-primary-hover: lighten($color-primary, 7%);
+
+$color-button-secondary-text: white;
+$color-button-secondary-background: $color-secondary;
+$color-button-secondary-hover: lighten($color-secondary, 7%);
+
+$color-button-accent-text: white;
+$color-button-accent-background: $color-accent;
+$color-button-accent-hover: lighten($color-accent, 7%);
+
+$color-button-danger-text: white;
+$color-button-danger-background: $color-danger;
+$color-button-danger-hover: lighten($color-danger, 7%);
+
+$color-button-approve-text: white;
+$color-button-approve-background: $color-approve;
+$color-button-approve-hover: lighten($color-approve, 7%);

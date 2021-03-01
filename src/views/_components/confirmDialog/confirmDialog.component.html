@@ -1,0 +1,16 @@
+<div class="dialog">
+  <div class="dialog-header">
+      {{header | translate}}
+  </div>
+
+  <div class="wiFix"></div>
+
+  <div class="text">
+    {{text | translate}}
+  </div>
+
+  <div class="buttons">
+    <button (click)="confrim()" class="dangerous">{{'Yes' | translate}}</button>
+    <button (click)="closeDialog()">{{'No' | translate}}</button>
+  </div>
+</div>

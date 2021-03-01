@@ -1,0 +1,12 @@
+<label class="pnInput" attr.data-disable="{{disable}}" (click)="bigClick()" [ngClass]="{'disabled': disable}">
+  <div class="placeholder" attr.data-hide="{{focused}}">{{placeholder | translate}}</div>
+  <icon *ngIf="icon" name="{{icon}}" (click)="click()" class="svgGray"></icon>
+
+  <input *ngIf="type == 'phone'" type="text" [(ngModel)]="inputModel" (ngModelChange)="modelChanged()" disabled="{{disable}}"
+    prefix="+38 (0" mask="00) 000 00 00" [suffix]="suffix" (focus)="onFocus()" (blur)="onBlur()" (keyup)="onKey($event)"/>
+
+  <input *ngIf="type != 'phone'" type="{{type}}" [(ngModel)]="inputModel" disabled="{{disable}}"
+    [prefix]="prefix" [mask]="mask" [suffix]="suffix" (ngModelChange)="modelChanged()" (focus)="onFocus()" (blur)="onBlur()" (keyup)="onKey($event)"/>
+
+  <div class="error" *ngIf="errorText" [@ShowAndHideByHeight]>{{errorText | translate}}</div>
+</label>

@@ -1,0 +1,38 @@
+@import '../../../../styles/styles-variables.scss';
+
+label {
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.dropdown-container {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  background: white;
+
+  .dropdown-options {
+    margin-top: 10px;
+    max-height: 220px;
+    overflow: scroll;
+  }
+}
+
+icon {
+  cursor: pointer;
+}
+  
+.dropdown-option {
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+}

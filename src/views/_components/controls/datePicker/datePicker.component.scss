@@ -1,0 +1,73 @@
+@import '../../../../styles/styles-variables.scss';
+
+label {
+  position: relative;
+  display: block;
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.inputLine {
+  background: white;
+  border: 2px solid $color-input-disabled;
+  border-radius: 8px;
+  padding: 16px;
+  height: 56px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+*:focus {
+  outline: none;
+}
+
+.error {
+  color: red;
+  padding-left: 10px;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.placeholder {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: white;
+  pointer-events: none;
+  font-size: 14px;
+  line-height: 24px;
+  transition: opacity 200ms ease-in-out, top 200ms ease-in-out, font-size 200ms ease-in-out, line-height 200ms ease-in-out;
+}
+
+.placeholder[data-hide="true"] {
+  position: absolute;
+  top: 6px;
+  left: 14px;
+  line-height: 10px;
+  font-size: 10px;
+  opacity: 0.6;
+  background: white;
+  pointer-events: none;
+}
+
+.hideInput {
+  opacity: 0;
+  height: 0;
+  width: 100%;
+}
+
+::ng-deep
+.mat-calendar {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 8px 8px 15px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,5 @@
+<label>
+  {{text | translate}}
+  <input type="radio" [(ngModel)]="inputModel" name="{{name}}" value="{{value}}" (ngModelChange)="modelChanged()"/>
+  <span></span>
+</label>

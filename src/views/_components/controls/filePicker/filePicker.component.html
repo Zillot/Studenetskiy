@@ -1,0 +1,14 @@
+<div id="dragZone" class="dropzone" ngxFileDropzone (fileDrop)="onFilePicked($event)">
+  <img *ngIf="!picked && notEditUrl" [src]="notEditUrl">
+  <img *ngIf="picked" [src]="picked.content">
+
+  <button id="dragZoneBtn" type="button" #filePicker="ngxFilePicker" 
+    ngxFilePicker accept="image/*" 
+    (readStart)="onReadStart($event)" (filePick)="onFilePicked($event)"
+    (readEnd)="onReadEnd($event)">
+    <div *ngIf="!picked && !notEditUrl" class="placeholder">{{placeholder | translate}}</div>
+    <div *ngIf="!picked && !notEditUrl">Перетащите сюда файл или кликните что бы выбрать</div>
+    
+    <div *ngIf="picked || notEditUrl" class="placeholder special">{{placeholder | translate}}</div>
+  </button>
+</div>

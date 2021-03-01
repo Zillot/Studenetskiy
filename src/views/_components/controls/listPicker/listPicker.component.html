@@ -1,0 +1,6 @@
+<label class="pnListPicker">
+  <customListPicker (change)="modelChanged()" [(inputModel)]="inputModel" [options]="getOptions" [valueKey]="valueKey">
+    <pnInput [errorText]="errorText" [(inputModel)]="selectedTransalted" type="text" [disable]="false" [placeholder]="placeholder" icon="arrowDown"></pnInput>
+    <icon *ngIf="iconName != null" [name]="iconName" (click)="showDropdown()"></icon>
+  </customListPicker>
+</label>

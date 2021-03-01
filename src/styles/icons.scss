@@ -1,0 +1,31 @@
+@import 'styles-variables.scss';
+
+.svgSmall svg {
+    width: 20px;
+    height: 20px;
+}
+
+.svgMedium svg {
+    width: 30px;
+    height: 30px;
+}
+
+.svgWhite svg {
+    fill: white;
+    stroke: transparent;
+}
+
+.svgPrimary svg {
+    fill: $color-primary;
+    stroke: transparent;
+}
+
+.svgSecondary svg {
+    fill: $color-secondary;
+    stroke: transparent;
+}
+
+.svgRed {
+    fill: $color-danger;
+    stroke: transparent;
+}

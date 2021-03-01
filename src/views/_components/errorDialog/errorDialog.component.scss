@@ -1,0 +1,21 @@
+@import '../../../styles/styles-variables.scss';
+
+.dialog {
+  margin: 0 0 0 0;
+  position: relative;
+  min-height: 180px;
+  height: initial;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.dialog .dialog-header button {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+}
+
+.text {
+  width: 100%;
+  text-align: center;
+}

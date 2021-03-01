@@ -1,0 +1,19 @@
+<label class="pnPriceRange">
+  <div class="text">
+    <div class="start">
+      {{startToShow}}
+    </div>
+    <div class="end">
+      {{endToShow}}
+    </div>
+  </div>
+
+  <div class="border">
+    <div class="range">
+      <div #line class="line"></div>
+      <div #lineHi class="lineHi"></div>
+      <div #start class="start" cdkDragLockAxis="x" cdkDrag  cdkDragBoundary=".border" [(cdkDragFreeDragPosition)]="dragPositionStart" (cdkDragMoved)="eventMovedHandler($event, 0)" (cdkDragEnded)="eventEndedHandler($event, 0)"></div>
+      <div #end class="end" cdkDragLockAxis="x" cdkDrag  cdkDragBoundary=".border" [(cdkDragFreeDragPosition)]="dragPositionEnd" (cdkDragMoved)="eventMovedHandler($event, 1)" (cdkDragEnded)="eventEndedHandler($event, 1)"></div>
+    </div>
+  </div>
+</label>

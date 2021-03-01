@@ -1,0 +1,15 @@
+<div class="dialog">
+  <div class="dialog-header">
+      {{header | translate}}
+
+      <button (click)="closeDialog()" class="noBody rounded medium">
+          <icon class="svgGray medium" name='close'></icon>
+      </button>
+  </div>
+
+  <div class="wiFix"></div>
+
+  <div class="text">
+    {{text | translate}}
+  </div>
+</div>

@@ -1,0 +1,113 @@
+@import 'styles-variables.scss';
+
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	background-color: rgba(0,0,0,0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    border-radius: 3px;
+}
+
+.svgIcon {
+    fill: $color-secondary;
+}
+
+.line-divider {
+  border-bottom: 1px solid $color-font-divider;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  
+.no_selection {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+  }
+
+.mat-calendar-body-today {
+    color: $color-primary-lighten;
+}
+.cdk-visually-hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.mat-calendar-body-disabled {
+    color: $color-font-disabled !important;
+
+    div {
+        color: $color-font-disabled !important;
+    }
+}
+
+.mat-calendar-body-label {
+    visibility: hidden;
+}
+
+tr.ng-star-inserted[aria-hidden] {
+    display: none;
+}
+
+.mat-calendar-arrow {
+    display: none !important;
+}
+
+.mat-calendar-period-button {
+    pointer-events: none;
+}
+
+.mat-button[disabled], .mat-icon-button[disabled], .mat-stroked-button[disabled], .mat-flat-button[disabled] {
+    background: $color-font-disabled;
+}
+
+.mat-calendar-controls {
+    height: 40px;
+    position: relative;
+
+    button {
+        position: absolute;
+        top: 2px
+    }
+
+    button:nth-child(1) {
+        background: transparent;
+        width: 140px;
+        left: calc(50% - 70px);
+
+        * {
+            color: black;
+        }
+    }
+
+    button:nth-child(3) {
+        left: 0px;
+    }
+
+    button:nth-child(4) {
+        right: 0px;
+    }
+}
+
+.mat-calendar-body-selected {
+  border: 1px solid $color-primary-lighten !important;
+}
+
+.pageHeader {
+    text-align: center;
+    width: 100%;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.cantFind {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
