@@ -2,54 +2,78 @@
 
 .logo {
     background-image: url('../../../assets/logo.png');
-    width: 100%;
-    height: 100%;
+    width: 115px;
+    height: calc(100% - 20px);
+    margin-top: 10px;
     background-size: contain;
     background-position: left top;
     background-repeat: no-repeat;
 }
 
-.coach_foto {
-    background-image: url('../../../assets/studenetskiy.jpg');
-    width: 100%;
+.singInBtn-hol {
     height: 100%;
-    background-size: cover;
-    background-position: center -120px;
-    background-repeat: no-repeat;
-}
 
-p.font_caps {
-    font-size: 25px; 
-    text-transform: uppercase;
-    margin: 15px 0;
+    .singInBtn {
+        color: white;
+        display: table;
+        height: 100%;
+
+        .singInBtn2 {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+        }
+
+        button {
+            margin: 0;
+        }
+    }
 }
 
 .block {
-    p {
-        color: white
+    height: 100%;
+
+    * {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+.navigation-holder {
+    width: calc(100% - 115px - 124px);
+    height: 100%;
+
+    .navigation {
+        height: 100%;
+        display: table; 
+        margin: 0 auto;
+
+        a {
+            color: white;
+            padding: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: rgba(255,255,255,0.1);
+            }
+        }
     }
 }
 
-.header_text {
-    height: 370px;
-}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100px;
+    transition: height 0.4s ease-in-out;
 
-.three_equals {
-    height: 370px;
-
-    > div {
-        position: relative;
+    .block_holder {
         height: 100%;
     }
-}
 
-.goBottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.center {
-    text-align: center;
+    &.small {
+        height: 60px;
+    }
 }

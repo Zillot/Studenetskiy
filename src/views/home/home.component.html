@@ -1,12 +1,72 @@
+<!-- trainer promotion -->
+<div class="block_holder trainerPromotionSection">
+    <div class="block">
+        <div>
+            <div class="table center">
+                <div class="tablecell">
+                    <p class="font_header">
+                        {{ 'changeYourLife' | translate }}
+                    </p>
+
+                    <p class="font_standalone">
+                        {{ 'youDeserveToBePretty' | translate }}
+                    </p>
+
+                    <p class="font_standalone">
+                        {{ 'phone' | translate }}
+                    </p>
+
+                    <p class="font_standalone">
+                        {{ 'address' | translate }}
+                    </p>
+
+                    <button class="noBody">
+                        {{ 'contactWithCoach' | translate }}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="coach_foto"></div>
+        </div>
+    </div>
+</div>
+
+<!-- video -->
+<div class="block_holder videoSection">
+    <div class="block">
+        <div class="video">
+            <!-- TODO -->
+        </div>
+
+        <div class="table center">
+            <div class="tablecell">
+                <p class="font_standalone">
+                    {{ 'mondayHaveCome' | translate }}
+                </p>
+
+                <p class="font_standalone">
+                    {{ 'startYouActionRightNow' | translate }}
+                </p>
+            </div>
+        </div>
+
+        <button>
+            {{ 'tryForFree' | translate }}
+        </button>
+    </div>
+</div>
+
 <!-- promotion -->
-<div class="block_holder">
+<div class="block_holder promotionSection">
     <div class="block">
         <div class="right_bigger">
             <div>
                 <div class="promotion_foto"></div>
             </div>
 
-            <div>
+            <div class="optionsBlock">
                 <div class="numbered_block">
                     <div class="number">1</div>
                     <p class="content">
@@ -15,12 +75,40 @@
                     </p>
                 </div>
 
+                <div class="numbered_arrows">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+
+                <div class="numbered_content twoItems">
+                    <div>
+                        {{ 'personal' | translate }}
+                    </div>
+                    <div>
+                        {{ 'inGroup' | translate }}
+                    </div>
+                </div>
+
                 <div class="numbered_block">
                     <div class="number">2</div>
                     <p class="content">
                         {{ 'describeYourGoals' | translate }}
                         <!--TODO-->
                     </p>
+                </div>
+
+                <div class="numbered_content threItems">
+                    <div>
+                        {{ 'trainOption1' | translate }}
+                    </div>
+                    <br>
+                    <div>
+                        {{ 'trainOption2' | translate }}
+                    </div>
+                    <br>
+                    <div>
+                        {{ 'trainOption3' | translate }}
+                    </div>
                 </div>
 
                 <div class="numbered_block">
@@ -32,37 +120,18 @@
             </div>
         </div>
         
-        <button>
-            {{ 'tryForFree' | translate }}
-        </button>
-    </div>
-</div>
-
-<!-- video -->
-<div class="block_holder">
-    <div class="block">
-        <div class="video">
-            <!-- TODO -->
+        <div class="center">
+            <button>
+                {{ 'tryForFree' | translate }}
+            </button>
         </div>
-
-        <p class="font_standalone">
-            {{ 'mondayHaveCome' | translate }}
-        </p>
-
-        <p class="font_standalone">
-            {{ 'startYouActionRightNow' | translate }}
-        </p>
-
-        <button>
-            {{ 'tryForFree' | translate }}
-        </button>
     </div>
 </div>
 
 <!-- beforeAfter -->
-<div class="block_holder">
+<div class="block_holder beforeAfterSection">
     <div class="block">
-        <p class="font_standalone">
+        <p class="font_standalone bigger">
             {{ 'thayHaveTryAlready' | translate }}
         </p>
 
@@ -70,18 +139,24 @@
             <npCarusel [imgs]="beforeAfterList"></npCarusel>
         </div>
 
-        <p class="font_standalone">
+        <br>
+
+        <p class="font_standalone bigger">
             {{ 'youCanDoSame' | translate }}
         </p>
 
-        <button>
-            {{ 'tryForFree' | translate }}
-        </button>
+        <br>
+
+        <div class="center">
+            <button>
+                {{ 'tryForFree' | translate }}
+            </button>
+        </div>
     </div>
 </div>
 
 <!-- responses -->
-<div class="block_holder">
+<div class="block_holder responsesSection">
     <div class="block">
         <p class="font_header">
             {{ 'responses' | translate }}
@@ -92,7 +167,7 @@
 </div>
 
 <!-- contacts -->
-<div class="block_holder">
+<div class="block_holder contactsSection">
     <div class="block">
         <p class="font_header">
             {{ 'contacts' | translate }}

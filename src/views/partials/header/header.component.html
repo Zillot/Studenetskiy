@@ -1,43 +1,25 @@
-<div class="header view-container">
-    <div class="block_holder special">
-        <div class="block">
-            <div class="three_equals">
-                <div>
-                    <div class="logo"></div>
+<div class="header view-container" [ngClass]="{'small': microHeader}">
+    <div class="block_holder micro dark">
+        <div class="block micro">                    
+            <div class="logo"></div>
+
+            <div class="navigation-holder">
+                <div class="navigation">
+                    <a>{{ 'nav-trainer' | translate }}</a>
+                    <a>{{ 'nav-train' | translate }}</a>
+                    <a>{{ 'nav-result' | translate }}</a>
+                    <a>{{ 'nav-reviews' | translate }}</a>
+                    <a>{{ 'nav-contacts' | translate }}</a>
                 </div>
+            </div>
 
-                <div class="header_text">
-                    <div class="center">
-                        <p class="font_caps">
-                            {{ 'changeYourLife' | translate }}
-                        </p>
-
-                        <p>
-                            {{ 'youDeserveToBePretty' | translate }}
-                        </p>
-                    </div>
-
-                    <div class="goBottom center">
-                        <p>
-                            {{ 'phone' | translate }}
-                        </p>
-
-                        <p>
-                            {{ 'address' | translate }}
-                        </p>
-
-                        <button class="noBody">
-                            {{ 'tryForFree' | translate }}
-                        </button>
-
-                        <button class="noBody">
-                            {{ 'contactWithCoach' | translate }}
+            <div class="singInBtn-hol">
+                <div class="singInBtn">
+                    <div class="singInBtn2">
+                        <button>
+                            {{ 'signUpToTraining' | translate }}
                         </button>
                     </div>
-                </div>
-
-                <div>
-                    <div class="coach_foto"></div>
                 </div>
             </div>
         </div>

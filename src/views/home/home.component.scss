@@ -1,17 +1,12 @@
 @import '../../styles/styles-variables.scss';
 
-.promotion_foto {
-    background-image: url('../../assets/promotion.JPG');
-    width: 100%;
-    height: 500px;
-    background-size: 100%;
-    background-position: center center;
-}
+$red: #b30000;
 
 .numbered_block {
     .number {
-        background-color: red;
-        color: black;
+        display: inline-block;
+        background-color: $red;
+        color: white;
         font-weight: bold;
         width: 30px;
         height: 30px;
@@ -20,10 +15,214 @@
         font-size: 20px;
         border-radius: 50px;
     }
-}
 
+    .content {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
 
 ::ng-deep
 .npCarusel {
     height: 600px;
+}
+
+.font_header {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.font_standalone {
+    text-align: center;
+
+    &.bigger {
+        font-size: 20px;
+    }
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.tablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.right_bigger {
+    position: relative;
+
+    > div {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+
+        &:first-child {
+            width: calc(30% - 10px);
+        }
+
+        &:last-child {
+            width: calc(70% - 10px);
+            margin-right: 0px;
+        }
+    }
+}
+
+// +++++++++++++++++ specific blocks +++++++++++++++++
+
+.trainerPromotionSection {
+    height: 470px;
+
+    .block {
+        height: 100%;
+
+        > div {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            height: 100%;
+        }
+
+        > :first-child {
+            width: calc(100% - 370px);
+        }
+
+        > :last-child {
+            width: 370px;
+
+            .coach_foto {
+                background-image: url('../../assets/studenetskiy.jpg');
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center -120px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.promotionSection {
+    .promotion_foto {
+        background-image: url('../../assets/promotion.JPG');
+        width: 100%;
+        height: 470px;
+        background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .block {
+        text-align: center;
+
+        button {
+            margin-top: 35px;
+            display: inline-block;
+        }
+    }
+
+    .optionsBlock {
+        width: 30% !important;
+        min-width: 550px;
+        padding: 35px;
+
+        .numbered_content {
+            margin-bottom: 30px;
+
+            div {
+                display: inline-block;
+                text-align: center;
+            }
+
+            &.twoItems {
+                div {
+                    width: 50%;
+                }
+            }
+
+            &.threItems {
+                padding-left: 40px;
+
+                div {
+                    display: inline-block;
+                    text-align: center;
+                    position: relative;
+                    padding: 5px;
+                    padding-left: 14px;
+
+                    &::after {
+                        content: "";
+                        left: 0;
+                        top: 13px;
+                        width: 0px;
+                        height: 0px;
+                        position: absolute;
+                        background: $red;
+                        width: 7px;
+                        height: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .numbered_arrows {
+        width: 100%;
+        height: 80px;
+        position: relative;
+
+        .left, .right {
+            width: 10px;
+            height: 65px;
+            background-color: $red;
+            position: absolute;
+
+            &::after {
+                content: "";
+                left: -5px;
+                bottom: -10px;
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                transform: rotate(45deg);
+                border: transparent 10px solid;
+                border-right: $red 10px solid;
+                border-bottom: $red 10px solid;
+            }
+        }
+
+        .left {
+            transform: rotate(40deg);
+            left: 150px;
+        }
+
+        .right {
+            transform: rotate(-40deg);
+            right: 150px;
+        }
+    }
+}
+
+.videoSection {
+    text-align: center;
+
+    button {
+        margin-top: 65px;
+    }
+}
+
+.beforeAfterSection {
+
+}
+
+.responsesSection {
+
+}
+
+.contactsSection {
+    
 }

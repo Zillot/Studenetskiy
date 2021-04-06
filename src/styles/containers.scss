@@ -79,38 +79,19 @@
     }
 }
 
-.right_bigger {
-    position: relative;
-
-    > div {
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 20px;
-
-        &:first-child {
-            width: calc(30% - 10px);
-        }
-
-        &:last-child {
-            width: calc(70% - 10px);
-            margin-right: 0px;
-        }
-    }
-}
-
 .block_holder {
     background-color: rgb(216, 216, 216);
     padding: 50px;
+
+    &.micro {
+        padding: 0;
+    }
 
     &:nth-child(odd) {
         background-color: white;
     }
 
     &.dark {
-        background-color: rgb(216, 216, 216);
-    }
-
-    &.special {
         background-color: rgb(20, 20, 20);
     }
 }
@@ -121,6 +102,10 @@
     min-height: 200px;
 
     font-size: 16px;
+
+    &.micro {
+        min-height: 10px;
+    }
 
     p {
         margin: 8px 0;

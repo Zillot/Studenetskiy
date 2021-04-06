@@ -1,8 +1,9 @@
 {
     "changeYourLife": "Измени свою жизнь и тело",
-    "youDeserveToBePretty": "Ты достойна быть здоровой и красивой",
+    "youDeserveToBePretty": "Ты достойна быть здоровой и красивой, а поможет тебе с етим",
     "address": "г. Буча, <дописать остальное>",
     "tryForFree": "Записать на бесплатную тренировку",
+    "signUpToTraining": "Записатся",
     "phone": "Михаил Студенецкий, Тел. +38 (063) 713 19 31",
     "contactWithCoach": "Связатся с тренером",
     "choseHowToTrain": "Выбери как будешь заниматся",
@@ -18,5 +19,13 @@
     "contacts": "Контакты твоего тренера",
     "coachName": "Студенецкий Михаил",
     "telephone": "Тел. +38 (063) 713 19 31",
-    "socials": "Пиши в Viber, Telegram или звони"
+    "socials": "Пиши в Viber, Telegram или звони",
+    "nav-trainer": "Тренер",
+    "nav-train": "Тренировка",
+    "nav-result": "Результаты",
+    "nav-reviews": "Отзывы",
+    "nav-contacts": "Контакты",
+    "trainOption1": "Похудение",
+    "trainOption2": "Набор веса",
+    "trainOption3": "Исправление осанки"
 }

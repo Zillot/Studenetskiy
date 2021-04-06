@@ -61,3 +61,22 @@ div {
   overflow: hidden; /* Обрезаем все, что не помещается в область */
   text-overflow: ellipsis; /* Добавляем многоточие */
 }
+
+// +++++++++++++++++ COMON +++++++++++++++++
+
+p.font_caps {
+  font-size: 25px; 
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.goBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
